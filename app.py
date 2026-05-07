@@ -4,10 +4,14 @@ import pickle
 
 # Load Model
 
-model = pickle.load(open("final_model_xg.pkl", "rb"))
-columns = pickle.load(open("columns.pkl", "rb"))
+import pickle
 
+with open("final_model_xg.pkl", "rb") as file:
+    model = pickle.load(file)
 
+with open("columns.pkl", "rb") as file:
+    columns = pickle.load(file)
+    
 # App Title
 
 st.title("💊 Medication Dosage Risk Prediction System")
